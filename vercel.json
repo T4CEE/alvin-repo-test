@@ -1,48 +1,18 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "framework": null,
+  "buildCommand": "turbo run build",
   "outputDirectory": "apps",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/cop30",
-      "dest": "/apps/event-cop30/dist/index.html"
+      "source": "/y20/:path*",
+      "destination": "/apps/event-y20/dist/:path*"
     },
     {
-      "src": "/cop30/(.*)",
-      "dest": "/apps/event-cop30/dist/$1"
+      "source": "/cop30/:path*",
+      "destination": "/apps/event-cop30/dist/:path*"
     },
     {
-      "src": "/y20",
-      "dest": "/apps/event-y20/dist/index.html"
-    },
-    {
-      "src": "/y20/(.*)",
-      "dest": "/apps/event-y20/dist/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/apps/event-y20/dist/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/cop30/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/y20/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "source": "/",
+      "destination": "/apps/landing/dist/index.html"
     }
   ]
 }
