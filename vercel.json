@@ -1,6 +1,6 @@
 {
   "buildCommand": "turbo run build",
-  "outputDirectory": "apps",
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/y20/:path*",
