@@ -1,6 +1,6 @@
 {
   "buildCommand": "turbo run build",
-  "outputDirectory": "apps/event-v20/dist",
+  "outputDirectory": "apps/event-y20/dist",
   "rewrites": [
     {
       "source": "/v20/:path*",
