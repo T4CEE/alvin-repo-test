@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Alvin Events – Registration Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body style="margin:0;padding:0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#111827;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#ffffff;">
+      <tr>
+        <td align="center" style="padding:48px 0;">
+          
+          <!-- logo above card -->
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="width:640px;max-width:640px;">
+            <tr>
+              <td align="left" style="padding:0 0 16px 0;">
+                <a href="https://alvin.finance" target="_blank" style="text-decoration:none;border:0;">
+                  <img src="https://framerusercontent.com/images/B2XQPxTLeOick9hC31Z9JPjqw.png?width=1720&height=1006"
+                       alt="Alvin Events" width="80"
+                       style="display:block;border:0;outline:none;text-decoration:none;height:auto;width:80px;max-width:100%;">
+                </a>
+              </td>
+            </tr>
+          </table>
+
+          <!-- bordered card -->
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="width:640px;max-width:640px;background:#ffffff;border:1px solid #e6e8eb;border-radius:10px;">
+            <tr>
+              <td style="padding:32px;font-family:Arial,Helvetica,sans-serif;color:#111827;">
+
+                <!-- Greeting -->
+                <h1 style="margin:0 0 20px 0;font-size:16px;line-height:1.4;font-weight:700;">
+                  Dear {{ $json.firstName }} {{ $json.surname }},
+                </h1>
+
+                <!-- Intro paragraph -->
+                <p style="margin:0 0 16px 0;font-size:14px;line-height:1.6;">
+                  Your registration for {{ $json.eventName }} has been confirmed. Please find your details below.
+                </p>
+
+                <h2 style="margin:16px 0 8px 0;font-size:13px;font-weight:700;">Registration details</h2>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:14px;line-height:1.7;">
+                  <tr><td width="200">Registration ID:</td><td><strong>{{ $json.Id }}</strong></td></tr>
+                  <tr><td>Passenger name:</td><td>{{ $json.firstName }} {{ $json.surname }}</td></tr>
+                  <tr><td>Registration date:</td><td>{{ $now.toFormat('yyyy-MM-dd') }}</td></tr>
+                </table>
+
+                <hr style="border:none;border-top:1px solid #eef0f2;margin:20px 0;">
+
+                <h2 style="margin:0 0 8px 0;font-size:13px;font-weight:700;">Event details</h2>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:14px;line-height:1.7;">
+                  <tr><td width="200">Event:</td><td>{{ $json.eventName }}</td></tr>
+                  <tr><td>Country:</td><td>{{ $json.country }}</td></tr>
+                  <tr><td>Organization:</td><td>{{ $json.organization }}</td></tr>
+                  <tr><td>Contact number:</td><td>{{ $json.countryCode }} {{ $json.contactNumber }}</td></tr>
+                </table>
+
+                
+                <hr style="border:none;border-top:1px solid #eef0f2;margin:20px 0;">
+
+                <h2 style="margin:0 0 8px 0;font-size:13px;font-weight:700;">Flight details</h2>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:14px;line-height:1.7;">
+                  <tr><td width="200">Departure city:</td><td>{{ $json.flightDetails.departureCity }}</td></tr>
+                  <tr><td>Arrival to Ekurhuleni/Johannesburg:</td><td>{{ $json.flightDetails.arrivalCity }}</td></tr>
+                  <tr><td>Flight number:</td><td>{{ $json.flightDetails.flightNumber }}</td></tr>
+                  <tr><td>Departure from Ekurhuleni/Johannesburg:</td><td>{{ $json.flightDetails.departureDate }}</td></tr>
+                </table>
+                
+
+                <hr style="border:none;border-top:1px solid #eef0f2;margin:20px 0;">
+
+                <h2 style="margin:0 0 8px 0;font-size:13px;font-weight:700;">Next steps</h2>
+                <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.7;">
+                  <li>Need to book your flight or accommodation to the summit? Place an order now with Alvin Travel. <a href="https://docs.google.com/forms/d/1e1DukL-gbw4XrnhVBf_WP2htL2i5T2Nz8MnXRiZ1tAM/edit?ts=6909e4e5" style="color:#071C7D;text-decoration:none;">Google Form</a></li>
+                  <li>Ensure your travel documents and visa are valid for South Africa if traveling from out-of-country.</li>
+                  <li>All updates will be communicated via email.</li>
+                </ul>
+
+                <p style="margin:20px 0 12px 0;font-size:13px;line-height:1.7;color:#4b5563;font-family:Arial,Helvetica,sans-serif;">
+                  For inquiries, reach us at 
+                  <a href="mailto:travel@alvin.finance" style="color:#071C7D;text-decoration:none;font-family:Arial,Helvetica,sans-serif;">travel@alvin.finance</a>.
+                </p>
+
+                <p style="margin:0 0 8px 0;font-size:14px;line-height:1.7;">Wishing you a successful event!</p>
+
+                <!-- Added clear spacing before signature -->
+                <p style="margin:0 0 20px 0;font-size:14px;line-height:1.7;">Best regards,</p>
+                <p style="margin:0;font-size:14px;line-height:1.7;">Winston and all of us at Alvin Events</p>
+
+              </td>
+            </tr>
+          </table>
+
+          <!-- footer -->
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="width:640px;max-width:640px;margin-top:16px;">
+            <tr>
+              <td align="center" style="font-size:12px;line-height:1.6;color:#6b7280;font-family:Arial,Helvetica,sans-serif;">
+                Alvin Technologies Ltd.<br>
+                251 Little Falls Drive, Wilmington, Delaware 19808, United States<br>
+                <a href="https://www.alvin.finance" style="color:#071C7D;text-decoration:none;font-family:Arial,Helvetica,sans-serif;">Visit us at www.alvin.finance</a>
+              </td>
+            </tr>
+          </table>
+          
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

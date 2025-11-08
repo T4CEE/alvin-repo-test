@@ -1,0 +1,18 @@
+{
+  "buildCommand": "turbo run build",
+  "outputDirectory": "apps/event-v20/dist",
+  "rewrites": [
+    {
+      "source": "/v20/:path*",
+      "destination": "/apps/event-y20/dist/:path*"
+    },
+    {
+      "source": "/cop30/:path*",
+      "destination": "/apps/event-cop30/dist/:path*"
+    },
+    {
+      "source": "/",
+      "destination": "/apps/landing/dist/index.html"
+    }
+  ]
+}
