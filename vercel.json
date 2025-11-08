@@ -3,12 +3,12 @@
   "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/y20/:path*",
-      "destination": "/apps/event-y20/dist/:path*"
-    },
-    {
       "source": "/cop30/:path*",
       "destination": "/apps/event-cop30/dist/:path*"
+    },
+    {
+      "source": "/y20/:path*",
+      "destination": "/apps/event-y20/dist/:path*"
     },
     {
       "source": "/",
