@@ -1,4 +1,24 @@
 {
-  "buildCommand": "turbo run build",
-  "outputDirectory": "dist"
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": null,
+  "outputDirectory": "apps",
+  "routes": [
+    {
+      "src": "/cop30",
+      "dest": "/event-cop30/dist/index.html"
+    },
+    {
+      "src": "/cop30/(.*)",
+      "dest": "/event-cop30/dist/$1"
+    },
+    {
+      "src": "/y20",
+      "dest": "/event-y20/dist/index.html"
+    },
+    {
+      "src": "/y20/(.*)",
+      "dest": "/event-y20/dist/$1"
+    }
+  ]
 }
