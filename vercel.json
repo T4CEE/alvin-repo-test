@@ -1,10 +1,18 @@
 {
-  "buildCommand": "turbo run build",
+  "buildCommand": "npm run build",
   "outputDirectory": ".",
   "rewrites": [
     {
+      "source": "/cop30/:path((?!.*\\..*$).*)",
+      "destination": "/apps/event-cop30/dist/index.html"
+    },
+    {
       "source": "/cop30/:path*",
       "destination": "/apps/event-cop30/dist/:path*"
+    },
+    {
+      "source": "/y20/:path((?!.*\\..*$).*)",
+      "destination": "/apps/event-y20/dist/index.html"
     },
     {
       "source": "/y20/:path*",
@@ -12,7 +20,7 @@
     },
     {
       "source": "/",
-      "destination": "/apps/landing/dist/index.html"
+      "destination": "/public/index.html"
     }
   ]
 }
